@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RestaurantTest {
     Restaurant restaurant;
+    List <Item> selectedItemsForCalculatingCost;
     //REFACTOR ALL THE REPEATED LINES OF CODE
     @BeforeEach
     public void creating_restaurant_for_testing() {
@@ -61,4 +62,12 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    
+    //<<<<<<<<<<<<<<<<<<<<<<<COST>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+     @Test
+    public void selected_item_from_list_should_return_order_cost(){
+        int totalCost;
+                totalCost = restaurant.getTotalCost(selectedItemsForCalculatingCost) ;
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<COST>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 }
